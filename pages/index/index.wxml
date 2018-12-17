@@ -4,10 +4,10 @@
   <view class="txt-temperature">{{temperature}}°</view>
   <view class="predict-list">
     <view class="predict-list-item" wx:for="{{predictArray}}">
-        <label class="txt-list-weekday"> {{item.weekDay}}</label>
+        <label class="txt-list-weekday"> {{item.time}}</label>
         <view style='display:flex; flex-direction:column; width:100%;' >
-          <label class="txt-list-temperature"> {{item.temperature}}°</label>
-          <label class="txt-list-weather"> {{item.weather}}</label>
+          <label class="txt-list-temperature"> {{item.temperatureHigh}}°</label>
+          <label class="txt-list-weather"> {{item.summary}}</label>
         </view>
     </view>
   </view>
