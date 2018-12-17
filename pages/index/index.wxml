@@ -3,7 +3,7 @@
   <view class="txt-location">{{location}}</view>
   <view class="txt-temperature">{{temperature}}°</view>
   <view class="predict-list">
-    <view class="predict-list-item" style='display:flex; flex-direction:row;' wx:for="{{predictArray}}">
+    <view class="predict-list-item" wx:for="{{predictArray}}">
         <label class="txt-list-weekday"> {{item.weekDay}}</label>
         <view style='display:flex; flex-direction:column; width:100%;' >
           <label class="txt-list-temperature"> {{item.temperature}}°</label>

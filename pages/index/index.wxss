@@ -29,9 +29,11 @@ page{
   padding-left: 35rpx;
 }
 .predict-list-item{
-  margin: 15rpx 40rpx;
+  margin: 20rpx 40rpx;
   overflow: hidden; 
   border-bottom: 1px solid #f0f0f0;
+  display:flex;
+  flex-direction:row;
 }
 .predict-list-item:last-child{
   border-bottom:none;
@@ -41,7 +43,7 @@ page{
   font-size: 15px;
   font-weight: bold;
   /* float: left; */
-  padding-top: 15rpx;
+  padding-top: 8rpx;
   height: 100%;
 }
 .txt-list-temperature{
@@ -49,25 +51,19 @@ page{
   font-size: 15px;
   font-weight: bold;
   text-align: right;
+  line-height: 17px;
 }
 .txt-list-weather{
   color:#f0f0f0	;
   font-size: 12px;
   font-weight: bold;
   text-align: right;
-  padding-bottom: 10rpx;
+  padding-bottom: 20rpx;
+  line-height: 12px;
 }
 .predict-list{
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   width: 100%;
-}
-.float-right{
-  float: right;
-}
-.horizontal-line {
-   width: 100%;
-   height: 1px;
-   background-color: #f0f0f0;
 }
 
