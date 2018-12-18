@@ -2,26 +2,31 @@
   <view class="txt-weather">{{weather}}</view>
   <view class="txt-location">{{location}}</view>
   <view class="txt-temperature">{{temperature}}°</view>
-  <scroll-view
-    class="predict-list"
-    scroll-y
-    style="height: 200px;"
-    bindscrolltoupper="upper"
-    bindscrolltolower="lower"
-    bindscroll="scroll"
-    scroll-into-view="{{toView}}"
-    scroll-top="{{scrollTop}}"
-  >
-  <!-- <view class="predict-list"> -->
-    <view class="predict-list-item" wx:for="{{predictArray}}">
+  <view wx:for="{{predictArray}}" wx:if="{{index==0}}" style="display:flex; flex-direction:row;  margin-top: 80rpx; width:100%;  ">
+      <label class="txt-weekday"> {{item.time}}</label>
+      <label class="txt-today"> 今天 </label>
+      <view class="txt-today-temperature"> {{item.temperatureHigh}}° {{item.temperatureLow}}°</view>
+  </view>
+  <scroll-view scroll-x style="width: 100%;">
+    <view style='display:flex; flex-direction:row;'>
+    <view class="hourly-list-item" wx:for="{{hourlyArray}}">
+          <view class="txt-hourly-list-time">{{item.time}}</view>
+          <view class="txt-hourly-list-temperature">{{item.apparentTemperature}}°</view>
+    </view>
+    </view>
+  </scroll-view>
+
+  <scroll-view class="predict-list" scroll-y style="height: 260px;">
+
+    <view class="predict-list-item" wx:for="{{predictArray}}" wx:if="{{index>0}}">
         <label class="txt-list-weekday"> {{item.time}}</label>
         <view style='display:flex; flex-direction:column; width:100%;' >
           <label class="txt-list-temperature"> {{item.temperatureHigh}}° {{item.temperatureLow}}°</label>
           <label class="txt-list-weather"> {{item.summary}}</label>
         </view>
     </view>
-  <!-- </view> -->
   </scroll-view>
 </view>
     <!-- "navigationBarBackgroundColor": "#7BC3CA", -->
+    <!-- "navigationBarBackgroundColor": "#A37B8D", -->
 
