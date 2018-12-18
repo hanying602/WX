@@ -2,13 +2,26 @@
   <view class="txt-weather">{{weather}}</view>
   <view class="txt-location">{{location}}</view>
   <view class="txt-temperature">{{temperature}}°</view>
-  <view class="predict-list">
+  <scroll-view
+    class="predict-list"
+    scroll-y
+    style="height: 200px;"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+  >
+  <!-- <view class="predict-list"> -->
     <view class="predict-list-item" wx:for="{{predictArray}}">
         <label class="txt-list-weekday"> {{item.time}}</label>
         <view style='display:flex; flex-direction:column; width:100%;' >
-          <label class="txt-list-temperature"> {{item.temperatureHigh}}°</label>
+          <label class="txt-list-temperature"> {{item.temperatureHigh}}° {{item.temperatureLow}}°</label>
           <label class="txt-list-weather"> {{item.summary}}</label>
         </view>
     </view>
-  </view>
+  <!-- </view> -->
+  </scroll-view>
 </view>
+    <!-- "navigationBarBackgroundColor": "#7BC3CA", -->
+

@@ -1,5 +1,5 @@
 page{
-  background-image: url("https://raw.githubusercontent.com/hanying602/WX/develop/images/sun.png");
+  background-image: url("https://raw.githubusercontent.com/hanying602/WX/develop/images/moon.png");
   background-repeat: no-repeat;
   overflow: hidden;
   margin: 0px; 
@@ -49,7 +49,7 @@ page{
 }
 .txt-list-temperature{
   color:#fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-align: right;
   line-height: 19px;
